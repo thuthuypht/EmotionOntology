@@ -1,0 +1,4 @@
+﻿,pred_neg,pred_neu,pred_pos
+gold_neg,670,15,1
+gold_neu,12,537,121
+gold_pos,4,93,583

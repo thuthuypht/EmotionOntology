@@ -1,0 +1,7 @@
+statistic,value,source
+named_classes,15,EONLP_V10_skos_enriched_final.owl (full institutional KG; not publicly distributed)
+object_properties,13,EONLP_V10_skos_enriched_final.owl (full institutional KG; not publicly distributed)
+datatype_properties,19,EONLP_V10_skos_enriched_final.owl (full institutional KG; not publicly distributed)
+named_individuals,12270,EONLP_V10_skos_enriched_final.owl (full institutional KG; not publicly distributed)
+rdf_triples,133588,EONLP_V10_skos_enriched_final.owl (full institutional KG; not publicly distributed)
+skos_altLabel_assertions,890,EONLP_V10_skos_enriched_final.owl (full institutional KG; not publicly distributed)

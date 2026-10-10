@@ -1,0 +1,7 @@
+query_or_entity,topic,result,deidentified_supporting_evidence
+Query A / Course-A,—,Positive = 13,Course-level positive-feedback aggregation
+Query A / Course-B,—,Positive = 9,Course-level positive-feedback aggregation
+Query A / Course-C,—,Positive = 5,Course-level positive-feedback aggregation
+"Query B / Course-D, HKI",Facilities,Negative = 1,Additional recording equipment was requested for practical activities.
+"Query B / Course-E, HKI",Facilities,Negative = 1,Classroom equipment was reported to malfunction frequently.
+"Query B / Course-F, HKI",Facilities,Negative = 1,The comment identified classroom facilities as an area requiring attention.

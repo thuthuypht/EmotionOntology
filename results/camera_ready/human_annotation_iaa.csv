@@ -1,0 +1,4 @@
+﻿task,mode,n_samples,po_observed,pe_expected,cohen_kappa,level,n_conflicts,conflict_rate,note
+Sentiment,THỰC TẾ,200,92.0%,55.6%,0.8198,"Xuất sắc (>0,80)",16,8.0%,Dữ liệu gán nhãn thực tế
+Emotion,THỰC TẾ,200,85.0%,33.3%,0.7752,"Tốt (0,61–0,80)",30,15.0%,Dữ liệu gán nhãn thực tế
+Topic,THỰC TẾ,200,90.0%,42.5%,0.8262,"Xuất sắc (>0,80)",20,10.0%,Dữ liệu gán nhãn thực tế

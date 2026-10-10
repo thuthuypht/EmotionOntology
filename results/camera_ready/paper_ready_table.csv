@@ -1,0 +1,7 @@
+﻿family,Model,n_runs,Accuracy,Macro-Precision,Macro-Recall,Macro-F1,Delta_Macro-F1_vs_family_text
+lightweight,Lightweight+Ontology,5,0.8297 ± 0.0031,0.8286 ± 0.0029,0.8289 ± 0.0031,0.8287 ± 0.0030,+0.0051
+lightweight,Lightweight+Topic,5,0.8275 ± 0.0035,0.8261 ± 0.0034,0.8267 ± 0.0035,0.8263 ± 0.0035,+0.0028
+lightweight,Lightweight-Text,5,0.8245 ± 0.0038,0.8236 ± 0.0035,0.8237 ± 0.0038,0.8236 ± 0.0036,+0.0000
+phobert,PhoBERT+Ontology,5,0.8784 ± 0.0029,0.8783 ± 0.0032,0.8778 ± 0.0029,0.8779 ± 0.0030,+0.0002
+phobert,PhoBERT+Topic,5,0.8789 ± 0.0036,0.8786 ± 0.0038,0.8783 ± 0.0036,0.8784 ± 0.0037,+0.0006
+phobert,PhoBERT-Text,5,0.8781 ± 0.0032,0.8781 ± 0.0035,0.8775 ± 0.0032,0.8777 ± 0.0033,+0.0000

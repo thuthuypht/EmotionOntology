@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software or data package, please cite the corresponding CSoNet 2026 paper."
+title: "EmotionOntology-CSoNet2026: Reproducibility Package"
+type: software
+authors:
+  - family-names: "Pham"
+    given-names: "Thi Thu Thuy"
+  - family-names: "Bui"
+    given-names: "Chi Thanh"
+  - family-names: "Huynh"
+    given-names: "Minh Duc"
+repository-code: "https://github.com/thuthuypht/EmotionOntology-CSoNet2026"
+year: 2026

@@ -1,0 +1,68 @@
+[
+  {
+    "seed": 3,
+    "family": "lightweight",
+    "Model": "Lightweight-Text",
+    "Accuracy": 0.8236738703339882,
+    "Macro-Precision": 0.8226241672861464,
+    "Macro-Recall": 0.8229173119141047,
+    "Macro-F1": 0.8227624480159647
+  },
+  {
+    "seed": 3,
+    "family": "lightweight",
+    "Model": "Lightweight+Topic",
+    "Accuracy": 0.8300589390962672,
+    "Macro-Precision": 0.8280689135168466,
+    "Macro-Recall": 0.8292245256311479,
+    "Macro-F1": 0.8285151416308928,
+    "meta_C": 0.2,
+    "override_threshold": 0.55,
+    "override_count": 53
+  },
+  {
+    "seed": 3,
+    "family": "lightweight",
+    "Model": "Lightweight+Ontology",
+    "Accuracy": 0.831532416502947,
+    "Macro-Precision": 0.8300192011309374,
+    "Macro-Recall": 0.8307798812488748,
+    "Macro-F1": 0.8303755533948531,
+    "meta_C": 0.02,
+    "override_threshold": 0.55,
+    "override_count": 90
+  },
+  {
+    "seed": 3,
+    "family": "phobert",
+    "Model": "PhoBERT-Text",
+    "Accuracy": 0.8796660117878192,
+    "Macro-Precision": 0.8794373386903098,
+    "Macro-Recall": 0.8790237203623454,
+    "Macro-F1": 0.879093739382549
+  },
+  {
+    "seed": 3,
+    "family": "phobert",
+    "Model": "PhoBERT+Topic",
+    "Accuracy": 0.8801571709233792,
+    "Macro-Precision": 0.8795777417564444,
+    "Macro-Recall": 0.8794864214342453,
+    "Macro-F1": 0.8793551598188877,
+    "meta_C": 0.05,
+    "override_threshold": 0.55,
+    "override_count": 6
+  },
+  {
+    "seed": 3,
+    "family": "phobert",
+    "Model": "PhoBERT+Ontology",
+    "Accuracy": 0.8791748526522594,
+    "Macro-Precision": 0.878728292994821,
+    "Macro-Recall": 0.8785072877765178,
+    "Macro-F1": 0.8784278930600511,
+    "meta_C": 0.2,
+    "override_threshold": 0.75,
+    "override_count": 6
+  }
+]

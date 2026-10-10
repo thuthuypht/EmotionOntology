@@ -1,0 +1,7 @@
+﻿statistic,value,source_file,paper_use_status
+named_classes,15,Ontology_NTU_FeedbackSystem_V8.owl,CONDITIONAL: reconcile this V8 ontology schema with the CSoNet manuscript schema before replacing the red warning.
+object_properties,15,Ontology_NTU_FeedbackSystem_V8.owl,CONDITIONAL: reconcile this V8 ontology schema with the CSoNet manuscript schema before replacing the red warning.
+datatype_properties,15,Ontology_NTU_FeedbackSystem_V8.owl,CONDITIONAL: reconcile this V8 ontology schema with the CSoNet manuscript schema before replacing the red warning.
+named_individuals,2198,Ontology_NTU_FeedbackSystem_V8.owl,CONDITIONAL: reconcile this V8 ontology schema with the CSoNet manuscript schema before replacing the red warning.
+rdf_triples,27711,Ontology_NTU_FeedbackSystem_V8.owl,CONDITIONAL: reconcile this V8 ontology schema with the CSoNet manuscript schema before replacing the red warning.
+skos_altLabel_assertions,0,Ontology_NTU_FeedbackSystem_V8.owl,CONDITIONAL: reconcile this V8 ontology schema with the CSoNet manuscript schema before replacing the red warning.

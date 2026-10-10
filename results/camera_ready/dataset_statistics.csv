@@ -1,0 +1,17 @@
+﻿split,dimension,category,count
+synthetic_train,TOTAL,all,8144
+synthetic_train,sentiment,negative,2711
+synthetic_train,sentiment,neutral,2724
+synthetic_train,sentiment,positive,2709
+synthetic_train,topic,curriculum,2040
+synthetic_train,topic,facility,2019
+synthetic_train,topic,lecturer,2026
+synthetic_train,topic,others,2059
+synthetic_val,TOTAL,all,2036
+synthetic_val,sentiment,negative,686
+synthetic_val,sentiment,neutral,670
+synthetic_val,sentiment,positive,680
+synthetic_val,topic,curriculum,507
+synthetic_val,topic,facility,526
+synthetic_val,topic,lecturer,515
+synthetic_val,topic,others,488

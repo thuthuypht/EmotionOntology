@@ -1,0 +1,138 @@
+
+=============================================================================
+QUY TẮC GÁN NHÃN THỦ CÔNG - HỆ THỐNG PHÂN TÍCH PHẢN HỒI SINH VIÊN
+=============================================================================
+Phiên bản: 1.0  |  Trường: Đại học Nha Trang
+
+MỤC ĐÍCH: Đảm bảo tính nhất quán khi nhiều người cùng gán nhãn ("gold set").
+Khi không chắc chắn, người gán nhãn nên chọn nhãn gần nhất và ghi chú.
+
+──────────────────────────────────────────────────────────────────────────────
+A. NHÃN SENTIMENT (Cảm xúc tổng thể)
+──────────────────────────────────────────────────────────────────────────────
+┌─────────────┬──────────────────────────────────────────────────────────────────┐
+│ Nhãn        │ Định nghĩa                                                        │
+├─────────────┼──────────────────────────────────────────────────────────────────┤
+│ Positive    │ Phản hồi thể hiện sự hài lòng, khen ngợi, đánh giá tốt.          │
+│             │ VD: "Cô dạy rất nhiệt tình, dễ hiểu"                             │
+│             │ VD: "Thầy rất tận tâm và hỗ trợ SV ngoài giờ"                   │
+├─────────────┼──────────────────────────────────────────────────────────────────┤
+│ Neutral     │ Phản hồi trung lập: đề xuất cải thiện, không bày tỏ cảm xúc rõ  │
+│             │ ràng, hoặc vừa khen vừa góp ý.                                   │
+│             │ VD: "Mong thầy cho thêm bài tập thực hành"                       │
+│             │ VD: "Cô dạy tốt nhưng tốc độ hơi nhanh"                          │
+├─────────────┼──────────────────────────────────────────────────────────────────┤
+│ Negative    │ Phản hồi thể hiện sự không hài lòng, phàn nàn, chỉ trích.        │
+│             │ VD: "Thầy giải thích không rõ ràng, khó theo kịp"                │
+│             │ VD: "Phòng học quá nóng, quạt hỏng mà không được sửa"            │
+└─────────────┴──────────────────────────────────────────────────────────────────┘
+
+LƯU Ý:
+- Ưu tiên nội dung tổng thể, không chỉ 1-2 từ đơn lẻ.
+- Câu có cả khen lẫn góp ý nhẹ → thường là Neutral.
+- Câu chỉ có đề xuất (mong/nên/cần) mà không có chê → Neutral.
+
+──────────────────────────────────────────────────────────────────────────────
+B. NHÃN EMOTION (Loại cảm xúc chi tiết)
+──────────────────────────────────────────────────────────────────────────────
+┌──────────────┬───────────────────────────────────────────────────────────────────┐
+│ Nhãn         │ Định nghĩa + Ví dụ minh họa                                       │
+├──────────────┼───────────────────────────────────────────────────────────────────┤
+│ KhenNgoi     │ Trực tiếp khen ngợi, ca ngợi giảng viên hoặc nhà trường.          │
+│              │ VD: "Thầy giảng rất hay, xuất sắc"                                │
+│              │ VD: "Cô rất dễ thương và nhiệt tình"                              │
+├──────────────┼───────────────────────────────────────────────────────────────────┤
+│ HaiLong      │ Hài lòng chung chung, không khen cụ thể nhưng thể hiện tích cực.  │
+│              │ VD: "Học phần ổn, không có vấn đề gì"                             │
+│              │ VD: "Nhìn chung em hài lòng với cách dạy của cô"                  │
+├──────────────┼───────────────────────────────────────────────────────────────────┤
+│ DeXuat       │ Đề xuất, góp ý mang tính xây dựng, không mang cảm xúc tiêu cực.  │
+│              │ VD: "Mong thầy dạy chậm hơn một chút"                             │
+│              │ VD: "Nên bổ sung thêm ví dụ thực tế vào bài giảng"               │
+├──────────────┼───────────────────────────────────────────────────────────────────┤
+│ PhanNan      │ Phàn nàn, không hài lòng, chỉ trích nhưng chưa đến mức thất vọng.│
+│              │ VD: "Cô dạy hơi khó hiểu, lòng vòng"                             │
+│              │ VD: "Phòng học quá nóng, mất tập trung"                           │
+├──────────────┼───────────────────────────────────────────────────────────────────┤
+│ ThatVong     │ Thất vọng nặng, thể hiện sự bức xúc, mất lòng tin.               │
+│              │ VD: "Rất thất vọng với cách dạy của thầy"                        │
+│              │ VD: "Không thể chấp nhận được, quá tệ"                           │
+├──────────────┼───────────────────────────────────────────────────────────────────┤
+│ KhongYKien   │ Không có ý kiến, phản hồi trống hoặc quá ngắn vô nghĩa.          │
+│              │ VD: "Không", "OK", "...", ""                                       │
+│              │ VD: "Bình thường thôi ạ", "Không có gì"                           │
+└──────────────┴───────────────────────────────────────────────────────────────────┘
+
+LƯU Ý:
+- PhanNan dùng khi không hài lòng nhưng vẫn mang tính góp ý.
+- ThatVong dùng khi có từ ngữ nặng nề, mất lòng tin hoàn toàn.
+- Nếu câu vừa DeXuat vừa PhanNan → ưu tiên PhanNan.
+
+──────────────────────────────────────────────────────────────────────────────
+C. NHÃN TOPIC (Chủ đề phản hồi)
+──────────────────────────────────────────────────────────────────────────────
+┌─────────────────┬──────────────────────────────────────────────────────────────────┐
+│ Nhãn            │ Định nghĩa + Ví dụ minh họa                                       │
+├─────────────────┼──────────────────────────────────────────────────────────────────┤
+│ GiangDay        │ Liên quan đến phương pháp giảng dạy, nội dung môn học,             │
+│                 │ kỹ năng giải thích của GV.                                         │
+│                 │ VD: "Cô truyền đạt kiến thức rõ ràng, dễ hiểu"                   │
+│                 │ VD: "Thầy giảng hơi nhanh, em khó theo kịp"                       │
+├─────────────────┼──────────────────────────────────────────────────────────────────┤
+│ TaiLieu         │ Liên quan đến slide, giáo trình, tài liệu học tập, LMS.            │
+│                 │ VD: "Mong thầy upload slide lên LMS sớm hơn"                       │
+│                 │ VD: "Giáo trình khó tìm, mong cô chia sẻ link"                    │
+├─────────────────┼──────────────────────────────────────────────────────────────────┤
+│ CoSoVatChat     │ Liên quan đến phòng học, thiết bị, wifi, điều hòa, âm thanh.      │
+│                 │ VD: "Phòng học quá nóng, điều hòa hỏng"                           │
+│                 │ VD: "Máy chiếu tối, khó nhìn bảng từ xa"                          │
+├─────────────────┼──────────────────────────────────────────────────────────────────┤
+│ ThoiGian        │ Liên quan đến giờ giấc, đúng giờ, bù giờ, nghỉ học.               │
+│                 │ VD: "Thầy hay đi trễ 10-15 phút"                                   │
+│                 │ VD: "Mong cô thông báo trước nếu phải đổi lịch"                   │
+├─────────────────┼──────────────────────────────────────────────────────────────────┤
+│ DanhGiaCongBang │ Liên quan đến điểm số, kiểm tra, đánh giá kết quả học tập.        │
+│                 │ VD: "Được kiểm tra đánh giá công bằng, đúng thực chất"            │
+│                 │ VD: "Tiêu chí chấm điểm chưa rõ ràng"                             │
+├─────────────────┼──────────────────────────────────────────────────────────────────┤
+│ ThaiDo          │ Liên quan đến thái độ, cách ứng xử, giao tiếp của GV với SV.      │
+│                 │ VD: "Thầy rất thân thiện, luôn lắng nghe SV"                      │
+│                 │ VD: "Cô đôi khi có thái độ không tốt với SV"                      │
+├─────────────────┼──────────────────────────────────────────────────────────────────┤
+│ Khac            │ Không thuộc các chủ đề trên, hoặc quá chung chung.                │
+│                 │ VD: "Không có gì để góp ý"                                         │
+│                 │ VD: "Tiếp tục phát huy" (không rõ chủ đề cụ thể)                  │
+└─────────────────┴──────────────────────────────────────────────────────────────────┘
+
+LƯU Ý:
+- Chọn chủ đề CHỦ ĐẠO của câu phản hồi (không cần bao quát hết).
+- Nếu câu đề cập cả GiangDay lẫn TaiLieu → chọn cái nổi bật hơn.
+
+──────────────────────────────────────────────────────────────────────────────
+D. QUY TẮC TỔNG QUÁT KHI GÁN NHÃN
+──────────────────────────────────────────────────────────────────────────────
+1. Đọc toàn bộ câu phản hồi trước, không đọc từng từ riêng lẻ.
+2. Cân nhắc loại câu hỏi (ưu điểm / góp ý GV / góp ý nhà trường).
+3. Không gán nhãn theo cảm tính — phải có lý do dựa trên nội dung.
+4. Khi gặp phản hồi mơ hồ: gán Neutral / DeXuat / Khac.
+5. Ghi chú vào cột "ghi_chu" khi phản hồi không rõ ràng.
+6. QUAN TRỌNG: Đồng thuận ≥ 80% giữa 2 người gán nhãn mới tính hợp lệ.
+
+──────────────────────────────────────────────────────────────────────────────
+E. VÍ DỤ MINH HỌA TỔNG HỢP
+──────────────────────────────────────────────────────────────────────────────
+Phản hồi: "Cô dạy rất nhiệt tình, truyền đạt kiến thức rõ ràng, dễ hiểu"
+→ sentiment: Positive | emotion: KhenNgoi | topic: GiangDay
+
+Phản hồi: "Mong thầy upload tài liệu lên LMS trước buổi học"
+→ sentiment: Neutral | emotion: DeXuat | topic: TaiLieu
+
+Phản hồi: "Phòng học quá nóng, máy chiếu hay bị hỏng"
+→ sentiment: Negative | emotion: PhanNan | topic: CoSoVatChat
+
+Phản hồi: "không có gì"
+→ sentiment: Neutral | emotion: KhongYKien | topic: Khac
+
+Phản hồi: "Rất thất vọng với cách chấm điểm, không công bằng chút nào"
+→ sentiment: Negative | emotion: ThatVong | topic: DanhGiaCongBang
+=============================================================================

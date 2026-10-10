@@ -1,0 +1,26 @@
+{
+  "input_dir": "/kaggle/input/datasets/phmththuthy/emotionontology/EmotionOntology_CameraReady_Experiments/input",
+  "output_dir": "/kaggle/working/csonet_camera_ready_outputs",
+  "run_phobert": true,
+  "skip_lightweight": false,
+  "preflight_only": false,
+  "force": false,
+  "model_name": "vinai/phobert-base-v2",
+  "max_length": 128,
+  "batch_size": 16,
+  "epochs": 5,
+  "lr": 2e-05,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.1,
+  "patience": 2,
+  "num_workers": 0,
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "max_train_samples": null,
+  "max_dev_samples": null
+}

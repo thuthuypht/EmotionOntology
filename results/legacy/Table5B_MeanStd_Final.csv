@@ -1,0 +1,5 @@
+﻿Dataset,Model,Accuracy (mean ± std),Macro-Precision (mean ± std),Macro-Recall (mean ± std),Macro-F1 (mean ± std)
+Benchmark split (synthetic),Ontology-assisted (ours),0.8307 ± 0.0035,0.8296 ± 0.0034,0.8300 ± 0.0035,0.8297 ± 0.0035
+Benchmark split (synthetic),Text-only baseline,0.8239 ± 0.0039,0.8230 ± 0.0035,0.8231 ± 0.0039,0.8230 ± 0.0037
+NTU survey (silver labels),Ontology-assisted (ours),0.9097 ± 0.0056,0.7608 ± 0.0763,0.6855 ± 0.0419,0.7035 ± 0.0118
+NTU survey (silver labels),Text-only baseline,0.9015 ± 0.0053,0.7130 ± 0.0243,0.7146 ± 0.0162,0.7093 ± 0.0093

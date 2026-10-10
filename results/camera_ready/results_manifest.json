@@ -1,0 +1,22 @@
+{
+  "outputs": [
+    "all_seed_metrics.csv",
+    "summary_mean_std.csv",
+    "paper_ready_table.csv",
+    "dataset_statistics.csv",
+    "ontology_kg_statistics.csv",
+    "human_annotation_iaa.csv",
+    "sparql_representative_results.csv",
+    "camera_ready_replacement_notes.md",
+    "run_config.json"
+  ],
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "phobert_ran": true,
+  "lightweight_ran": true
+}
