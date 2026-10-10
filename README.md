@@ -1,4 +1,4 @@
-# EmotionOntology-CSoNet2026
+# EmotionOntology
 
 Reproducibility package for the AI-TECH Workshop at CSoNet 2026 paper:
 
@@ -7,7 +7,7 @@ Reproducibility package for the AI-TECH Workshop at CSoNet 2026 paper:
 Authors: Pham Thi Thu Thuy, Bui Chi Thanh, and Huynh Minh Duc  
 Affiliation: Nha Trang University, Vietnam
 
-Expected repository URL: https://github.com/thuthuypht/EmotionOntology-CSoNet2026
+Expected repository URL: https://github.com/thuthuypht/EmotionOntology
 
 ## What is included
 
